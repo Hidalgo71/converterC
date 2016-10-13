@@ -4,18 +4,25 @@ int main()
 {
 	float fah, cel;
 	float cToF = 1.800;
-	int bin, remainder, dec,selection;
+	int bin, remainder, dec,select;
 
-	switch (selection)
+	printf("1-Temperature\n");
+	printf("2-Decimal to Binary\n");
+	printf("Binary to Decimal\n");
+
+	printf("Select Conversion:");
+	scanf_s("%d", &select);
+
+	switch (select)
 	{
-	case 0:
+	case 1:
 		printf("Enter The Celcius and Fahreneit Degree:");											//Celcius to Fahreneit and Fahreneit to Celcius
 		scanf_s("%f%f", &cel, &fah);
 		fah = cel*cToF + 32.00;
 		cel = (fah - 32.0 * 5) / 9;
-		printf("Celcius to Fahreneit:%f\nFahreneit to Celcius:%f\n\n", fah, cel);
+		printf("\nCelcius to Fahreneit:%f\nFahreneit to Celcius:%f\n\n", fah, cel);
 		break;
-	case 1:
+	case 2:
 		printf("Enter The Decimal Number:");														//Convert Decimal Numbers to Binary and Binary to Decimal
 		scanf_s("%d", &dec);
 		while (dec >= 1)
@@ -25,6 +32,8 @@ int main()
 			dec = dec / 2;
 		}
 		break;
+	case 3:
+
 	default:printf("Illegal Enter");
 		break;
 	}
