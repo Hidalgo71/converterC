@@ -1,14 +1,17 @@
 #include <stdio.h>
+#include <limits.h>
+#include <float.h> 
 
 int main()
 {
-	float fah, cel;
-	float cToF = 1.800;
-	int bin, remainder, dec,select;
+	float fah, cel, cToF = 1.800;
+	int bin, remainder, dec,select, asciiB;
 
 	printf("1-Temperature\n");
 	printf("2-Decimal to Binary\n");
-	printf("Binary to Decimal\n");
+	printf("3-Binary to Decimal\n");
+	printf("4-Max Values Integer and Float\n");
+	printf("5-ASCII Reprentation(Char)\n");
 
 	printf("Select Conversion:");
 	scanf_s("%d", &select);
@@ -33,6 +36,24 @@ int main()
 		}
 		break;
 	case 3:
+		printf("Enter The Binary Number:");
+		scanf_s("%d", &bin);
+
+	case 4:																							//Calculates the Max value of and Integer and Float Number
+		printf("The Maximum Value of Int = %d\n", INT_MAX);
+		printf("The maximum value of Float = %f\n", FLT_MAX);
+		break;
+	case 5:
+		printf("Enter The Binary Number:");															//Take Binary Number and Prints ASCII Reprentation(Char) of it.
+		scanf_s("%d",asciiB);
+		if (asciiB > 128)
+		printf("Please Enter The Number Between 0-127");
+		//return select;
+		else
+		{
+			
+		}
+		break;
 
 	default:printf("Illegal Enter");
 		break;
@@ -43,10 +64,9 @@ int main()
 
 
 
-																									//Calculates the Max value of and Iteger and Float Number
+																									
 
-
-																									//Take Binary Number and Prints ASCII Reprentation(Char) of it.
+																									
 
 																									//01001000-01100101-01101100-0110100-011101111-00101110
 
