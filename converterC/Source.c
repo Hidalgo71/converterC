@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
-#include <float.h> 
+#include <float.h>
+#include <math.h>
 
 int main()
 {
@@ -26,7 +27,7 @@ int main()
 		printf("\nCelcius to Fahreneit:%f\nFahreneit to Celcius:%f\n\n", fah, cel);
 		break;
 	case 2:
-		printf("Enter The Decimal Number:");														//Convert Decimal Numbers to Binary and Binary to Decimal
+		printf("Enter The Decimal Number:");														//Convert Decimal Numbers to Binary
 		scanf_s("%d", &dec);
 		while (dec >= 1)
 		{
@@ -36,9 +37,18 @@ int main()
 		}
 		break;
 	case 3:
-		printf("Enter The Binary Number:");
-		scanf_s("%d", &bin);
-
+		printf("Enter The Binary Number:");															//Convert Binary to Decimal
+		scanf_s("%11d", &bin);
+		int decNum = 0, i = 0, rem;
+		while(bin!=0)
+		{
+			rem = bin % 10;
+			bin /= 10;
+			decNum += rem*pow(2, i);
+			i++;
+			printf("Your Decimal Number is:%d\n", decNum);
+		}
+		break;
 	case 4:																							//Calculates the Max value of and Integer and Float Number
 		printf("The Maximum Value of Int = %d\n", INT_MAX);
 		printf("The maximum value of Float = %f\n", FLT_MAX);
@@ -46,8 +56,8 @@ int main()
 	case 5:
 		printf("Enter The Binary Number:");															//Take Binary Number and Prints ASCII Reprentation(Char) of it.
 		scanf_s("%d",asciiB);
-		if (asciiB > 128)
-		printf("Please Enter The Number Between 0-127");
+		if (asciiB > 256)
+		printf("Please Enter The Number Between 0-256");
 		//return select;
 		else
 		{
