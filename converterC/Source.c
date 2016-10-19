@@ -7,12 +7,14 @@ int main()
 {
 	float fah, cel, cToF = 1.800;
 	int bin, remainder, dec,select, asciiB;
+	char c;
 
 	printf("1-Temperature\n");
 	printf("2-Decimal to Binary\n");
 	printf("3-Binary to Decimal\n");
 	printf("4-Max Values Integer and Float\n");
 	printf("5-ASCII Reprentation(Char)\n");
+	printf("""6-Hello.""\n");
 
 	printf("Select Conversion:");
 	scanf_s("%d", &select);
@@ -55,14 +57,13 @@ int main()
 		break;
 	case 5:
 		printf("Enter The Binary Number:");															//Take Binary Number and Prints ASCII Reprentation(Char) of it.
-		scanf_s("%d",asciiB);
-		if (asciiB > 256)
-		printf("Please Enter The Number Between 0-256");
-		//return select;
-		else
-		{
-			
-		}
+		scanf_s("%d", &asciiB);
+		printf("ASCII Reprentation %c\n", asciiB);
+		break;
+	case 6:
+		printf("Say Hello for Machines");
+		scanf("%c", &c);
+		printf("%d\n", c);
 		break;
 
 	default:printf("Illegal Enter");
