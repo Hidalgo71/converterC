@@ -6,13 +6,15 @@
 int main()
 {
 	float fah, cel, cToF = 1.800;
-	int bin, remainder, dec,select, asciiB;
+	int bin, remainder, dec,select, asciiB,decC,remainderC;
+	char c;
 
 	printf("1-Temperature\n");
 	printf("2-Decimal to Binary\n");
 	printf("3-Binary to Decimal\n");
 	printf("4-Max Values Integer and Float\n");
 	printf("5-ASCII Reprentation(Char)\n");
+	printf("6-Hello.\n");
 
 	printf("Select Conversion:");
 	scanf_s("%d", &select);
@@ -37,14 +39,14 @@ int main()
 		}
 		break;
 	case 3:
-		printf("Enter The Binary Number:");															//Convert Binary to Decimal
+		printf("Enter The Binary Number:");															//Convert Binary Numbers to Decimal
 		scanf_s("%11d", &bin);
-		int decNum = 0, i = 0, rem;
+		int decNum = 0, i = 0, remain;
 		while(bin!=0)
 		{
-			rem = bin % 10;
+			remain = bin % 10;
 			bin /= 10;
-			decNum += rem*pow(2, i);
+			decNum += remain*pow(2, i);
 			i++;
 			printf("Your Decimal Number is:%d\n", decNum);
 		}
@@ -55,16 +57,13 @@ int main()
 		break;
 	case 5:
 		printf("Enter The Binary Number:");															//Take Binary Number and Prints ASCII Reprentation(Char) of it.
-		scanf_s("%d",asciiB);
-		if (asciiB > 256)
-		printf("Please Enter The Number Between 0-256");
-		//return select;
-		else
-		{
-			
-		}
+		scanf_s("%d",&asciiB);
+		printf("ASCII Value IS:%c\n", asciiB);
 		break;
+	case 6:
+		printf("'Hello.' Means for Machines:\n");
 
+		break;
 	default:printf("Illegal Enter");
 		break;
 	}
