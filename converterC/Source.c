@@ -7,6 +7,7 @@ int main()
 {
 	float fah, cel, cToF = 1.800;
 	int bin, remainder, dec,select, asciiB;
+	int numD1, numD2,counerD,job;
 	char c;
 
 	printf("1-Temperature\n");
@@ -15,8 +16,9 @@ int main()
 	printf("4-Max Values Integer and Float\n");
 	printf("5-ASCII Reprentation(Char)\n");
 	printf("""6-Hello.""\n");
+	printf("7-Divide w Subtraction\n");
 
-	printf("Select Conversion:");
+	printf("\nSelect Conversion:");
 	scanf_s("%d", &select);
 
 	switch (select)
@@ -64,6 +66,21 @@ int main()
 		printf("Say Hello for Machines");
 		scanf("%c", &c);
 		printf("%d\n", c);
+		break;
+	case 7:
+		printf("First Number:");
+		scanf_s("%d", &numD1);
+		printf("Second Number:");
+		scanf_s("%d", &numD2);
+		
+		while (numD1<numD2)
+		{
+			counerD = numD1;
+			numD1 -= numD2;
+			counerD++;
+			
+		}
+		printf("Resault is %d\n", counerD);
 		break;
 
 	default:printf("Illegal Enter");
