@@ -8,6 +8,8 @@ int main()
 	float fah, cel, cToF = 1.800;
 	int bin, remainder, dec,select, asciiB;
 	int numD1, numD2,counerD,job;
+	int max_int = 0;
+	int j = 0;
 	char c;
 
 	printf("1-Temperature\n");
@@ -54,8 +56,19 @@ int main()
 		}
 		break;
 	case 4:																							//Calculates the Max value of and Integer and Float Number
-		printf("The Maximum Value of Int = %d\n", INT_MAX);
-		printf("The maximum value of Float = %f\n", FLT_MAX);
+		//maximum number of an integer
+		j = 0;
+		while (j <= 30)
+		{
+			max_int = max_int + pow(2.0, j);
+			j = j + 1;
+
+		}
+
+		printf("Maximum value of an integer = %u\n\n\n", max_int);
+
+		//maximum number of an float number
+		
 		break;
 	case 5:
 		printf("Enter The Binary Number:");															//Take Binary Number and Prints ASCII Reprentation(Char) of it.
