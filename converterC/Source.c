@@ -7,7 +7,7 @@ int main()
 {
 	float fah, cel, cToF = 1.800;
 	int bin, remainder, dec,select, asciiB;
-	int numD1, numD2,counerD,job;
+	int numD1, numD2,counerD,job,numM1,numM2,counterM,iM;
 	int max_int = 0;
 	int j = 0;
 	char c;
@@ -19,6 +19,7 @@ int main()
 	printf("5-ASCII Reprentation(Char)\n");
 	printf("""6-Hello.""\n");
 	printf("7-Divide w Subtraction\n");
+	printf("8-Multiplication w Add\n");
 
 	printf("\nSelect Conversion:");
 	scanf_s("%d", &select);
@@ -90,10 +91,21 @@ int main()
 		{
 			counerD = numD1;
 			numD1 -= numD2;
-			counerD++;
-			
+			counerD++;			
 		}
 		printf("Resault is %d\n", counerD);
+		break;
+	case 8:
+		printf("First Number:");
+		scanf_s("%d", &numM1);
+		printf("Second Number:");
+		scanf_s("%d", &numM2);
+
+		for (iM=0; iM<numM2; iM++)
+		{
+			counterM += numM1;
+		}
+		printf("Result is:%d\n", counterM);
 		break;
 
 	default:printf("Illegal Enter");
