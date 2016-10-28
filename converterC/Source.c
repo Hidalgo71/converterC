@@ -129,21 +129,6 @@ int main()
 	default:printf("Illegal Enter");
 		break;
 	}
-																									
-
-
-
-
-
-																									
-
-																									
-
-																									//01001000-01100101-01101100-0110100-011101111-00101110
-
-
-
-
 
 	system("PAUSE");
 	return 0;
