@@ -3,9 +3,13 @@
 #include <float.h>
 #include <math.h>
 
+#define INCH_TO_CM 2.54
+#define LITRE_TO_MCUBE 0.001
+
 int main()
 {
 	float fah, cel, cToF = 1.800;
+	float inc, cm, lt, mc;
 	int bin, remainder, dec,select, asciiB;
 	int numD1, numD2,counerD,job,numM1,numM2,counterM,iM;
 	int max_int = 0;
@@ -20,6 +24,8 @@ int main()
 	printf("""6-Hello.""\n");
 	printf("7-Divide w Subtraction\n");
 	printf("8-Multiplication w Add\n");
+	printf("9-Inch to CM\n");
+	printf("10-Litre to Metrecube\n");
 
 	printf("\nSelect Conversion:");
 	scanf_s("%d", &select);
@@ -76,7 +82,7 @@ int main()
 		scanf_s("%d", &asciiB);
 		printf("ASCII Reprentation %c\n", asciiB);
 		break;
-	case 6:
+	case 6:											//IT'S NOT WORK YET!
 		printf("Say Hello for Machines");
 		scanf("%c", &c);
 		printf("%d\n", c);
@@ -107,6 +113,18 @@ int main()
 		}
 		printf("Result is:%d\n", counterM);
 		break;
+	case 9:
+		printf("Lenght in Inches:");
+			scanf_s("%f", &inc);
+			cm = inc*INCH_TO_CM;
+			printf("%.2f in =%.2f cm\n",inc,cm);
+			break;
+	case 10:
+		printf("Volume in Lire: ");
+			scanf_s("%f", &lt);
+			mc = LITRE_TO_MCUBE*lt;
+			printf("%.2f Lt=%.2f m^3\n", lt, mc);
+			break;
 
 	default:printf("Illegal Enter");
 		break;
